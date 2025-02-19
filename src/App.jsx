@@ -78,7 +78,7 @@ function App() {
             </div>
             <div className="mb-12">
               <p>時間選擇器</p>
-              <DatePicker defaultValue={dayjs('2025/02/13')} format={{
+              <DatePicker inputReadOnly={true} defaultValue={dayjs('2025/02/13')} format={{
                 format: 'YYYY-MM-DD',
                 type: 'mask',
               }} />
