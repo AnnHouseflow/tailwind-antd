@@ -70,6 +70,7 @@ function App() {
             </div>
             <div className="mb-12">
               <p>有 RWD 的 AutoComplete MultipleTags：多餘的 Tags 會折疊</p>
+              <p>需用 showSearch + useBreakpoint 設定行動版不啟動鍵盤</p>
               <MultipleTags />
             </div>
             <div className="mb-12">
@@ -78,6 +79,7 @@ function App() {
             </div>
             <div className="mb-12">
               <p>時間選擇器</p>
+              <p>可透過 inputReadOnly 屬性設定行動版不啟動鍵盤</p>
               <DatePicker inputReadOnly={true} defaultValue={dayjs('2025/02/13')} format={{
                 format: 'YYYY-MM-DD',
                 type: 'mask',
