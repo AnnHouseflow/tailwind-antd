@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { Select, Tooltip } from 'antd';
 
+const { useBreakpoint } = Grid;
+
 const options = [];
 for (let i = 10; i < 36; i++) {
     const value = i.toString(36) + i;
@@ -27,14 +29,8 @@ export default function MultipleTags() {
         onChange: setValue,
     };;
 
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-    useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth < 768);
-        window.addEventListener("resize", handleResize);
-
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
+    const screens = useBreakpoint();
+    const isMobile = !screens.md;
 
     return (
         <Select
