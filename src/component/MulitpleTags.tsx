@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Select, Tooltip } from 'antd';
 
-const { useBreakpoint } = Grid;
+const { useBreakpoint, Grid } = Grid;
 
 const options = [];
 for (let i = 10; i < 36; i++) {
