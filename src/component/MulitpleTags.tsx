@@ -1,8 +1,8 @@
 // @ts-nocheck
 import React, { useState, useEffect } from 'react';
-import { Select, Tooltip } from 'antd';
+import { Select, Tooltip, Grid } from 'antd';
 
-const { useBreakpoint, Grid } = Grid;
+const { useBreakpoint } = Grid;
 
 const options = [];
 for (let i = 10; i < 36; i++) {
